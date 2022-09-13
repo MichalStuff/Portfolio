@@ -1,0 +1,86 @@
+@import './variables';
+@import './breakpoints';
+
+.Header{
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    @include xl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1600px;
+    }
+    &__Canvas{
+        max-width: 1280px;
+    }
+    &__Hello{
+        margin: 70px 20px;
+        text-shadow: 3px 1px $color-button;
+        font-size: 40px;
+        text-align: center;
+        @include xs{
+            margin: 70px 20px 40px 20px;
+            font-size: 32px;
+            @media (orientation : landscape) {
+                font-size: 32px;
+            }
+        }
+        @include sm{
+            font-size: 42px;
+            @media (orientation : landscape) {
+                margin: 30px;
+            }
+        }
+        @include md{
+            @media (orientation : portrait) {                
+                font-size: 50px;
+                margin: 80px 60px;
+            }
+        }
+        @include lg{
+            font-size: 58px;
+            margin: 30px 60px;
+            
+        }
+        @include xl{
+            font-size: 72px; 
+            margin: 40px 100px;
+        }
+
+    }
+    &__curtain{
+        position: absolute;
+        top:70px;
+        right: 0;
+        width: 100%;
+        height: 205px;
+        background-color: $color-bg;
+        -webkit-animation: 1s showHeader;
+                animation: 1s showHeader;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+
+} 
+
+@-webkit-keyframes showHeader {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+@keyframes showHeader {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}

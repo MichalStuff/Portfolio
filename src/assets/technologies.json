@@ -1,0 +1,11 @@
+{
+    "html" : "I know HTML werry well and I'm learning how to use BEM metodology",
+    "js" : "I know JavaScript werry wall. I like it because of its simplicity and possibilities. I am using it to almost all of my project's not only realated to web development (wisualazing some data)",
+    "react" : "I have good knowledge about React and I love the way how it's simplifies making fast and modern websites",
+    "css" : "I know CSS wery well. ",
+    "sass" : "I have a good knowledge about SCSS ",
+    "cplusplus" : "I know C++ wery well that was my firs language that I was learning and I's starts my journey as a proggramer, currently I'm using it only to arduino/stm",
+    "python" : "I have meet with python only to learn about IA so i know basics",
+    "node" : "I know only couple stuffs in Node.js. Mostyl i was using it to communicate between computer and arduino or as a localserver",
+    "git" : "I know basics with git mosly how to add my projects and push commits" 
+}

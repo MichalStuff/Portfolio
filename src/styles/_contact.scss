@@ -1,0 +1,52 @@
+@import './variables';
+@import './breakpoints';
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include md{
+        @media (orientation : portrait){
+            min-height: 80vh;
+        }
+    }
+    @include xl{
+        min-height: 85vh;
+    }
+    &__header{
+        font-size: 38px;
+        text-shadow: 3px 1px $color-button;
+        margin: 2rem 0;
+    }
+
+    &__form{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.2em ;    
+        &__input{
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid $color-border;
+            
+            color: $color-white;
+            background-color: transparent;
+            resize: none;
+        }
+        &__button{
+            margin: 20px auto;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            width: 200px;
+            border-radius: 10px;
+            padding : 20px 50px;
+            color: $color-white;
+            background-color: $color-button;
+        }
+    }
+}

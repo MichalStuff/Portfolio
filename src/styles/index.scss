@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,600&display=swap');
+@import './header';
+@import './variables';
+@import './breakpoints';
+@import './menuNarrow';
+@import './menuWide';
+@import './about';
+@import './technologies';
+@import './projects';
+@import './contact';
+@import './footer';
+
+ 
+*{
+    margin : 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $color-bg; 
+    color: $color-white; 
+    font-family: $font-primary;
+    // overflow: hidden;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 200vh;
+} 
+

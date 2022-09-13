@@ -1,0 +1,112 @@
+@import './variables';
+@import './breakpoints';
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sm{
+        @media (orientation : landscape) {
+            margin-bottom: 80px;
+        }
+    }
+    @include md{
+        margin-bottom: 80px;
+    }
+    @include xl{
+        width: 90%;
+    }
+
+    &__options{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        width: 100%;
+        @include xl{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .option{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-grow: 1;
+            @include xl{
+                flex-basis:0;
+                margin: 30px 0 40px;
+            }
+            &__icon{
+                margin: 10px 0 ;
+                font-size: 44px;
+                color : white;
+                @include md{
+                    @media (orientation : portrait) {
+                        font-size: 60px;
+                    }
+                }
+            }
+            &__tooltip:hover::after{
+                content: attr(data-tooltip);
+            }
+            &__tooltip::after{
+                display: block;
+                position: absolute;
+                top: -2rem;
+                right: 50%;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                transform: translateX(50%);
+                background-color: #333f;
+                border-radius: 0.25rem;
+                padding: 5px;
+            }
+            h5{
+                position: relative;
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                @include md{
+                    @media (orientation : portrait) {
+                        font-size: 30px;
+                    }
+                }
+                @include xl{
+                    font-size: 22px;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+@-webkit-keyframes hop {
+    0%{
+        top:0;
+    }
+    50%{
+        top:-10px;
+    }
+    100%{
+        top:0; 
+    }
+}
+
+
+@keyframes hop {
+    0%{
+        top:0;
+    }
+    50%{
+        top:-10px;
+    }
+    100%{
+        top:0    
+    }
+}
