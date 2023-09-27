@@ -2,27 +2,22 @@ import Lottie from "lottie-react";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import animationData from "../assets/coding_animation2.json";
 import { Button } from "../components/Button";
-import { useType } from "../hooks/useType";
+import TypeEffect from "../components/TypeEffect";
 
 export const Welcome = () => {
-  const { text, ariaLabel } = useType({
-    text: ["Frontend Developer", "Fullstack Developer", "I Love to code"],
-    puaseInterval: 3000,
-    delteInterval: 50,
-    emoji: [" 🤩", " 🧐", " 💖"],
-  });
   return (
-    <section className="flex flex-col justify-center h-[100svh] pt-16 pb-32 px-6 snap-strat">
+    <section className="flex flex-col justify-center h-screen pt-16 pb-32 px-6">
       <article className="flex flex-col items-center justify-center gap-2 text-center md:gap-4 w-full ">
         <h1 className="block text-5xl font-normal text-center lg:text-6xl w-[100%]">
           Hello, I'm Michał Szuleta
         </h1>
-        <span
-          className="text-3xl font-medium text-center after:content-['|'] after:animate-blink after:p-1 lg:text-4xl"
-          aria-label={ariaLabel}
-        >
-          {text}
-        </span>
+        <TypeEffect
+          text={["Frontend Developer", "Fullstack Developer", "I Love to code"]}
+          emoji={[" 🤩", " 🧐", " 💖"]}
+          typeInterval={150}
+          puaseInterval={3000}
+          delteInterval={50}
+        />
         <Button className="m-6 md:m-0" icon={faDownload}>
           Resume
         </Button>

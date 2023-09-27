@@ -7,7 +7,7 @@ export enum TypePhase {
 }
 
 export const useType = ({
-  text,
+  text = [""],
   typeInterval = 150,
   puaseInterval = 1000,
   delteInterval = 150,
@@ -20,7 +20,7 @@ export const useType = ({
   delteInterval?: number;
 }): {
   ariaLabel: string;
-  text: string;
+  displayText: string;
 } => {
   const [index, setIndex] = useState<number>(0);
   const [currentText, setCurrentText] = useState<string>("");
@@ -77,7 +77,8 @@ export const useType = ({
     phase,
     index,
     puaseInterval,
+    emoji,
   ]);
 
-  return { text: currentText, ariaLabel: text[index] };
+  return { displayText: currentText, ariaLabel: text[index] };
 };
