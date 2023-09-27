@@ -12,7 +12,7 @@ export const Button = ({ children, icon, className }: ButtonProps) => {
   return (
     <button
       className={twMerge(
-        "bg-primary text-white text-center px-8 py-3",
+        "flex justify-around items-center bg-primary text-white text-md text-center gap-3 px-8 py-3 m-2  rounded-md",
         className
       )}
     >
