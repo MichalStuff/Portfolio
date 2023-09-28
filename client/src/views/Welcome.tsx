@@ -6,9 +6,12 @@ import TypeEffect from "../components/TypeEffect";
 
 export const Welcome = () => {
   return (
-    <section className="flex flex-col justify-center h-screen pt-16 pb-32 px-6">
-      <article className="flex flex-col items-center justify-center gap-2 text-center md:gap-4 w-full ">
-        <h1 className="block text-5xl font-normal text-center lg:text-6xl w-[100%]">
+    <section
+      id="Home"
+      className="text-center h-screen flex flex-col items-center justify-center p-6 "
+    >
+      <div className="flex flex-col items-center justify-center gap-3 ">
+        <h1 className="text-5xl md:text-6xl lg:text-6xl">
           Hello, I'm Michał Szuleta
         </h1>
         <TypeEffect
@@ -18,16 +21,14 @@ export const Welcome = () => {
           puaseInterval={3000}
           delteInterval={50}
         />
-        <Button className="m-6 md:m-0" icon={faDownload}>
+        <Button className="m-6 md:m-3" icon={faDownload}>
           Resume
         </Button>
-      </article>
-      <header className="flex items-center justify-center ">
         <Lottie
           animationData={animationData}
-          className="w-4/5 md:w-3/5 lg:w-5/12 landscape:hidden landscape:lg:block xl:max-w-[450px]"
+          className="w-4/5 max-w-[300px] md:max-w-[400px] narrow:hidden"
         />
-      </header>
+      </div>
     </section>
   );
 };

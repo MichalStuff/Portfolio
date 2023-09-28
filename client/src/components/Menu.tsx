@@ -3,7 +3,7 @@ import {
   faUser,
   faEnvelope,
   faLaptopCode,
-  faGear,
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { MenuItem } from "./MenuItem";
@@ -17,7 +17,7 @@ const Menu = () => {
 
   const menuItems = [
     { icon: faHouse, text: "Home", pos: "translate-x-0" },
-    { icon: faGear, text: "Skills", pos: "translate-x-16" },
+    { icon: faBrain, text: "Skills", pos: "translate-x-16" },
     { icon: faUser, text: "About", pos: "translate-x-32" },
     { icon: faLaptopCode, text: "Projects", pos: "translate-x-48" },
     { icon: faEnvelope, text: "Contact", pos: "translate-x-64" },

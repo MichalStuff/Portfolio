@@ -29,6 +29,9 @@ export default {
       animation:{
         'blink' : ' blink .7s step-end infinite' 
       },
+      screens:{
+        'narrow' : { 'raw': 'only screen and (max-height: 420px) and (orientation:landscape)'}
+      }
       
     }, 
 
