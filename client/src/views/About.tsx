@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className="text-left h-screen flex flex-col items-center justify-center p-6 narrow:pb-[90px] md:gap-6 lg:gap-16 lg:pb-0 xl:gap-20"
+      className="text-left h-screen flex flex-col items-center justify-evenly p-8 narrow:pb-[90px] md:gap-6 lg:gap-16 lg:pb-0 xl:gap-20"
     >
       <article className="flex flex-col gap-6  lg:gap-10">
         <h1 className="text-5xl font-medium text-primary underline underline-offset-8 landscape:lg:text-6xl">

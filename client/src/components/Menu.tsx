@@ -16,11 +16,21 @@ const Menu = () => {
   };
 
   const menuItems = [
-    { icon: faHouse, text: "Home", pos: "translate-x-0" },
-    { icon: faBrain, text: "Skills", pos: "translate-x-16" },
-    { icon: faUser, text: "About", pos: "translate-x-32" },
-    { icon: faLaptopCode, text: "Projects", pos: "translate-x-48" },
-    { icon: faEnvelope, text: "Contact", pos: "translate-x-64" },
+    { icon: faHouse, to: "#Home", text: "Home", pos: "translate-x-0" },
+    { icon: faUser, to: "#About", text: "About", pos: "translate-x-16" },
+    { icon: faBrain, to: "#Skills", text: "Skills", pos: "translate-x-32" },
+    {
+      icon: faLaptopCode,
+      to: "#Projects",
+      text: "Projects",
+      pos: "translate-x-48",
+    },
+    {
+      icon: faEnvelope,
+      to: "#Contact",
+      text: "Contact",
+      pos: "translate-x-64",
+    },
   ];
 
   return (
@@ -35,6 +45,7 @@ const Menu = () => {
 
         {menuItems.map((item, index) => (
           <MenuItem
+            to={item.to}
             key={index}
             className={""}
             icon={item.icon}
